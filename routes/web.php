@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\carritoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -17,6 +18,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+// PRODUCTOS
 Route::get('/', [HomeController::class, 'index'])->name('inicio');
 
 Route::get('Productos/Frutas-y-verduras', [ProductosController::class, 'frutas'])->name('frutas');
@@ -41,9 +43,16 @@ Route::get('Productos/Mascotas', [ProductosController::class, 'mascotas'])->name
 
 Route::get('Productos/detalle/{productos}', [ProductosController::class, 'info'])->name('detail');
 
-// carrito de compra
+// cCARERITODE COMPRAS
 Route::put('/add', [CarritoController::class, 'add'])->name('cart.add');
 
 Route::post('/update', [CarritoController::class, 'update'])->name('cart.update');
 Route::post('/remove', [CarritoController::class, 'remove'])->name('cart.remove');
 Route::post('/clear', [CarritoController::class, 'clear'])->name('cart.clear');
+
+// USUARIOS
+Route::get('Login', [UserController::class, 'login'])->name('login');
+
+Route::get('Registrar', [UserController::class, 'rgistro'])->name('registrar');
+
+Route::get('Rcuperar-contraseña', [UserController::class, 'password'])->name('password');
