@@ -6,7 +6,7 @@
             </div>
             <div class="main_logo" id="logo">
                 <a href="{{route('inicio')}}"><img src="{{ asset('../resources/images/logo-1.PNG') }} " alt=""></a>
-                <a href="{{route('inicio')}}"><img class="logo-inverse" src="{{ asset('../resources/images/logo.png') }} " alt=""></a>
+                <a href="{{route('inicio')}}"><img class="logo-inverse" src="{{ asset('../resources/images/logo-1.png') }} " alt=""></a>
             </div>
             <div class="search120">
                 <div class="ui search">
