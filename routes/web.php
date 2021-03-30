@@ -43,7 +43,7 @@ Route::get('Productos/Mascotas', [ProductosController::class, 'mascotas'])->name
 
 Route::get('Productos/detalle/{productos}', [ProductosController::class, 'info'])->name('detail');
 
-// cCARERITODE COMPRAS
+// CARERITODE COMPRAS
 Route::put('/add', [CarritoController::class, 'add'])->name('cart.add');
 
 Route::post('/update', [CarritoController::class, 'update'])->name('cart.update');
@@ -56,3 +56,8 @@ Route::get('Login', [UserController::class, 'login'])->name('login');
 Route::get('Registrar', [UserController::class, 'rgistro'])->name('registrar');
 
 Route::get('Rcuperar-contraseña', [UserController::class, 'password'])->name('password');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

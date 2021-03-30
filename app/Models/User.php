@@ -1,6 +1,4 @@
-
 <?php
-
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -19,6 +17,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'apellidos',
+        'telefono',
         'email',
         'password',
     ];

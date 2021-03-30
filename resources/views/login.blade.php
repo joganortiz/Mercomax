@@ -6,17 +6,17 @@
 
 <div class="form-dt">
     <div class="form-inpts checout-address-step">
-        <form>
+        <form action="{{ route('welcome') }}" method="GET">
             <div class="form-title"><h6>Inicia Sesión</h6></div>
                 <div class="form-group pos_rel">
-                    <input id="phone[number]" name="phone" type="email" placeholder="Ingrese usuario" class="form-control lgn_input" required="">
+                    <input name="email" type="email" placeholder="Ingrese usuario" class="form-control lgn_input" required="">
                     <i class="uil uil-mobile-android-alt lgn_icon"></i>
                 </div>
                 <div class="form-group pos_rel">
                     <input id="password1" name="password1" type="password" placeholder="Ingrese contraseña" class="form-control lgn_input" required="">
                     <i class="uil uil-padlock lgn_icon"></i>
                 </div>
-                <button class="login-btn hover-btn" type="submit">Iniciar sesión</button>
+                <button class="login-btn hover-btn" type="submit" value="Send">Iniciar sesión</button>
             
         </form>
     </div>

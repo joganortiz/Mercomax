@@ -30,7 +30,7 @@
                     <li class="ui dropdown">
                         <a href="#" class="opts_account">
                             <img src="{{ asset('../resources/images/avatar/img-5.jpg') }} " alt="">
-                            <span class="user__name">John Doe</span>
+                            <span class="user__name">{{ Auth::user()->name }}</span>
                             <i class="uil uil-angle-down"></i>
                         </a>
                         <div class="menu dropdown_account">
@@ -42,8 +42,15 @@
                                     </span>
                                 </a>
                             </div>
+                                <!--Finalizar sesion-->
                             <a href="dashboard_my_addresses.html" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Mi dirección</a>
-                            <a href="#" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Cerrar sesión</a>
+                            <a href="{{ route('logout') }}" class="item channel_item" 
+                            onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();"
+                            {{ __('Logout') }}><i class="uil uil-lock-alt icon__1"></i>Cerrar sesión</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                 </ul>
