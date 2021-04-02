@@ -51,7 +51,7 @@ Route::post('/remove', [CarritoController::class, 'remove'])->name('cart.remove'
 Route::post('/clear', [CarritoController::class, 'clear'])->name('cart.clear');
 
 // USUARIOS
-Route::get('Login', [UserController::class, 'login'])->name('login');
+/* Route::get('Login', [UserController::class, 'login'])->name('login'); */
 
 Route::get('Registrar', [UserController::class, 'rgistro'])->name('registrar');
 
