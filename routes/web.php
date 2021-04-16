@@ -52,11 +52,8 @@ Route::post('/clear', [CarritoController::class, 'clear'])->name('cart.clear');
 
 // USUARIOS
 /* Route::get('Login', [UserController::class, 'login'])->name('login'); */
-
-Route::get('Registrar', [UserController::class, 'rgistro'])->name('registrar');
-
+/* Route::get('Registrar', [UserController::class, 'rgistro'])->name('registrar'); */
 Route::get('Rcuperar-contraseña', [UserController::class, 'password'])->name('password');
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
