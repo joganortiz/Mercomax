@@ -82,7 +82,7 @@
                                         <a href="request_product.html" class="item channel_item page__links">Solicitud de producto</a>
                                         <a href="order_placed.html" class="item channel_item page__links">Pedido realizado</a>
                                         <a href="{{route('login')}}" class="item channel_item page__links">Iniciar sesión</a>
-                                        <a href="{{route('registrar')}}" class="item channel_item page__links">Registrarse</a>
+                                        <a href="{{route('register')}}" class="item channel_item page__links">Registrarse</a>
                                         <a href="forgot_password.html" class="item channel_item page__links">Has olvidado tu contraseña</a>
                                     </div>
                                 </div>
