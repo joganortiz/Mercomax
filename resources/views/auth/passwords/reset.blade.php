@@ -1,6 +1,8 @@
-@extends('layouts.app')
 @extends('layouts.sesion')
-@section('content')
+
+@section('title', 'Mercomax - Registrar')
+
+@section('contenido')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
