@@ -43,6 +43,8 @@ Route::get('Productos/Mascotas', [ProductosController::class, 'mascotas'])->name
 
 Route::get('Productos/detalle/{productos}', [ProductosController::class, 'info'])->name('detail');
 
+Route::get('/', [ProductosController::class, 'productos'])->name('inicio');
+
 // CARERITODE COMPRAS
 Route::put('/add', [CarritoController::class, 'add'])->name('cart.add');
 

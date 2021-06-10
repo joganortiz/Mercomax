@@ -175,5 +175,17 @@ class ProductosController extends Controller
 
         return view('productos.detail', compact('producto'));
     }
+
+    //Principal (todos los productos)
+    public function productos(){
+
+        $productos = Productos::join("unidades", "unidades.id", "=", "productos.id_unidad")
+                                ->select("productos.id", "productos.codigo", "productos.imagen", "productos.nombre", "unidades.unidad_corto", 
+                                            "productos.cantidad", "productos.precio", "productos.stock_minimo", "productos.descripcion", "productos.descuento",
+                                            "productos.precio_descuento")
+                                ->get();
+
+        return view('welcome', compact('productos') );
+    }
     
 }

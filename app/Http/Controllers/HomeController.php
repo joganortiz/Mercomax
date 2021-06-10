@@ -25,4 +25,6 @@ class HomeController extends Controller
     {
         return view('welcome'); //Esto luego se cambia por el welcome
     }
+
+    
 }
